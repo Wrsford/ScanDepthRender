@@ -185,8 +185,16 @@
     return didSucceed;
 }
 
+- (void)resetView {
+	_animation->reset();
+}
+
 - (void) setupGestureRecognizer
 {
+	UITapGestureRecognizer *resetGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetView)];
+	[resetGesture setNumberOfTapsRequired:2];
+	[self.view addGestureRecognizer:resetGesture];
+	
     UIPinchGestureRecognizer *pinchScaleGesture = [[UIPinchGestureRecognizer alloc]
                                                    initWithTarget:self
                                                    action:@selector(pinchScaleGesture:)];
@@ -270,7 +278,7 @@
 - (void)sensorDidOutputSynchronizedDepthFrame:(STDepthFrame*)depthFrame
                                  andColorFrame:(CMSampleBufferRef)sampleBuffer
 {
-    [self renderDepthFrame:depthFrame];
+	[self renderDepthFrame:depthFrame];
     [self renderColorFrame:sampleBuffer];
     [_renderer updatePointsWithDepth:_depthFrame image:_cameraImageView.image.CGImage];
 }

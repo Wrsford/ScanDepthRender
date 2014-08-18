@@ -37,9 +37,8 @@
 		A6ABFC7318CA470200BF0851 /* SDRPointCloudRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ABFC7218CA470200BF0851 /* SDRPointCloudRenderer.m */; };
 		A6ABFC7A18CA511200BF0851 /* PointCloudShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = A6ABFC7418CA4DE600BF0851 /* PointCloudShader.vsh */; };
 		A6ABFC7B18CA511200BF0851 /* PointCloudShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = A6ABFC7518CA4DE600BF0851 /* PointCloudShader.fsh */; };
-		A6D60CD7196B0954008C0A0F /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D60CD6196B0954008C0A0F /* Structure.framework */; };
-		A6D60CD8196B0954008C0A0F /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D60CD6196B0954008C0A0F /* Structure.framework */; };
 		A6D60CDA196B0AEE008C0A0F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D60CD9196B0AEE008C0A0F /* QuartzCore.framework */; };
+		FC7870E619A28DF600530CB3 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7870E519A28DF600530CB3 /* Structure.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +90,8 @@
 		A6ABFC7218CA470200BF0851 /* SDRPointCloudRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRPointCloudRenderer.m; sourceTree = "<group>"; };
 		A6ABFC7418CA4DE600BF0851 /* PointCloudShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = PointCloudShader.vsh; path = Shaders/PointCloudShader.vsh; sourceTree = "<group>"; };
 		A6ABFC7518CA4DE600BF0851 /* PointCloudShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = PointCloudShader.fsh; path = Shaders/PointCloudShader.fsh; sourceTree = "<group>"; };
-		A6D60CD6196B0954008C0A0F /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Structure.framework; sourceTree = "<group>"; };
 		A6D60CD9196B0AEE008C0A0F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC7870E519A28DF600530CB3 /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Structure.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7870E619A28DF600530CB3 /* Structure.framework in Frameworks */,
 				A6D60CDA196B0AEE008C0A0F /* QuartzCore.framework in Frameworks */,
 				A6ABFC6D18C93F3F00BF0851 /* AVFoundation.framework in Frameworks */,
 				A6ABFC1F18C8FF5000BF0851 /* Foundation.framework in Frameworks */,
@@ -107,7 +107,6 @@
 				A6ABFC2718C8FF5000BF0851 /* OpenGLES.framework in Frameworks */,
 				A6ABFC6818C9027B00BF0851 /* ImageIO.framework in Frameworks */,
 				A6ABFC6618C9024E00BF0851 /* CoreMedia.framework in Frameworks */,
-				A6D60CD7196B0954008C0A0F /* Structure.framework in Frameworks */,
 				A6ABFC6418C9023E00BF0851 /* CoreImage.framework in Frameworks */,
 				A6ABFC6218C9023100BF0851 /* ExternalAccessory.framework in Frameworks */,
 				A6ABFC5F18C9022000BF0851 /* CoreMotion.framework in Frameworks */,
@@ -122,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D60CD8196B0954008C0A0F /* Structure.framework in Frameworks */,
 				A6ABFC4618C8FF5000BF0851 /* XCTest.framework in Frameworks */,
 				A6ABFC4818C8FF5000BF0851 /* UIKit.framework in Frameworks */,
 				A6ABFC4718C8FF5000BF0851 /* Foundation.framework in Frameworks */,
@@ -155,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				A6D60CD9196B0AEE008C0A0F /* QuartzCore.framework */,
-				A6D60CD6196B0954008C0A0F /* Structure.framework */,
+				FC7870E519A28DF600530CB3 /* Structure.framework */,
 				A6ABFC6B18C902AE00BF0851 /* Accelerate.framework */,
 				A6ABFC6918C9029100BF0851 /* AVFoundation.framework */,
 				A6ABFC2018C8FF5000BF0851 /* CoreGraphics.framework */,

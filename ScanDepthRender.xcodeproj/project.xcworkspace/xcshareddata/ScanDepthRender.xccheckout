@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BC767417-AD41-4AC8-AE37-1533EA58F3FA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScanDepthRender</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB8804A9-5F99-419A-B28D-939696779346</key>
+		<string>https://github.com/Wrsford/ScanDepthRender.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ScanDepthRender.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB8804A9-5F99-419A-B28D-939696779346</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Wrsford/ScanDepthRender.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB8804A9-5F99-419A-B28D-939696779346</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB8804A9-5F99-419A-B28D-939696779346</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScanDepthRender</string>
+		</dict>
+	</array>
+</dict>
+</plist>

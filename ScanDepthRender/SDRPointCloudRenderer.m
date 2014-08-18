@@ -202,15 +202,63 @@ GLubyte gTestPointColors[NUM_TEST_POINTS * 4] =
     }
     if (depthFrame)
     {
+		//BOOL full = YES;
+		float lastWDepth = 2.0f;
+		float lastHDepths[_cols];
         float *data = (GLfloat *)_pointsData.mutableBytes;
+		//float *inferredData = (GLfloat *)malloc(sizeof(GLfloat)*_pointsData.length);
         const float *depths = [depthFrame depthAsMillimeters];
-        
+        /*if (full) {
+			for (int r = 0; r < _rows; r++)
+			{
+				for (int c = 0; c < _cols; c++)
+				{
+					unsigned long idx = r * _cols + c;
+					float basePoint = data[idx];
+					inferredData[idx] = basePoint;
+					
+					if (basePoint) {
+						continue;
+					}
+					float points[3];
+					//points[0] = data[idx+1];
+					//points[1] = data[(r+1) * _cols + c];
+					//points[2] = data[(r+1) * _cols + (c+1)];
+					//points[0] = 0.0f;
+					if (r) {
+						points[0] = data[(r-1) * _cols + c];
+						//points[5] = data[(r-1) * _cols + (c+1)];
+						if (c) {
+							points[1] = data[idx-1];
+							//points[7] = data[(r+1) * _cols + (c-1)];
+							points[2] = data[(r-1) * _cols + (c-1)];
+							inferredData[idx] = (points[0] + points[1] + points[2])/3.0;
+						}
+					}
+					
+					
+				}
+			}
+		}*/
+		
         for (int r = 0; r < _rows; r++)
         {
             for (int c = 0; c < _cols; c++)
             {
-                float depth = depths[r * _cols + c]/1000.0;
-                float * point = data + (r*_cols+c)*3;
+				if (!r) {
+					lastHDepths[c] = 2.0f;
+				}
+				unsigned long idx = r * _cols + c;
+                float depth = depths[idx];
+				if ((int)depth == 0) {
+					depth = (lastWDepth+lastHDepths[c])/2.0f;
+				} else {
+					depth /= 1000.0;
+					lastWDepth = depth;
+					lastHDepths[c] = depth;
+				}
+				
+                float * point = data + (idx)*3;
                 point[0] = depth * (c - _cx) / _fx;
                 point[1] = depth * (_cy - r) / _fy;
                 point[2] = 2.0f - depth;

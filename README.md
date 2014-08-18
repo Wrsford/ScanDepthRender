@@ -1,3 +1,7 @@
+Wrsford Addon
+=============
+Program now infers the depth based on points around it when no depth data is provided.
+
 ScanDepthRender
 ===============
 A demo on how to turn the raw depth data and synced color camera data from the [Structure Sensor](http://structure.io/) into a real-time 3D point cloud that you can spin around with your fingers.
